@@ -19,7 +19,7 @@ const config = {
   resolve: ['', '.js', '.jsx'],
   module: {
     loaders: [
-      { test: /\.jsx$/, exclude: /(node_modules)/, loaders: ['react-hot', 'babel'] }
+      { test: /\.(js|jsx)$/, exclude: /(node_modules)/, loaders: ['react-hot', 'babel'] }
     ]
   },
   plugins: [

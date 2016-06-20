@@ -11,6 +11,7 @@
   rules: {
     "semi": 0,
     "space-before-function-paren": 0,
+    "react/jsx-quotes": 0,
     "jsx-quotes": [2, "prefer-double"],
     "strict": 0,
     "arrow-parens": [2, "as-needed"],
