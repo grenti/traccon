@@ -1,4 +1,4 @@
-import { ADD_TRACK, TOGGLE_TRACK, SET_VISIBILITY_FILTER } from './actionTypes';
+import { ADD_TRACK, TOGGLE_TRACK, SET_VISIBILITY_FILTER } from '../constants/actionTypes';
 
 export function addTrack(name) {
   return { type: ADD_TRACK, name };

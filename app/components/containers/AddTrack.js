@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import addTrack from '../../actions';
+import addTrack from '../../actions/index';
 
 let AddTrack = ({ dispatch }) => {
   let input;

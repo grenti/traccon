@@ -3,7 +3,7 @@ import Track from './Track';
 
 const TrackList = ({ tracks, onTrackClick }) => {
   (<ul>
-    {tracks.map(track =>
+    {(tracks || []).map(track =>
       <Track
         key={track.id}
         {...track}
