@@ -1,13 +1,24 @@
-import { ADD_TRACK, TOGGLE_TRACK, SET_VISIBILITY_FILTER } from '../constants/actionTypes';
+// import { ADD_TRACK, TOGGLE_TRACK, SET_VISIBILITY_FILTER } from '../constants/actionTypes';
 
-export function addTrack(name) {
-  return { type: ADD_TRACK, name };
-}
+let nextTrackId = 0;
+export const addTrack = name => {
+  return {
+    type: 'ADD_TRACK',
+    id: nextTrackId++,
+    name
+  };
+};
 
-export function toggleTrack(id) {
-  return { type: TOGGLE_TRACK, id };
-}
+export const toggleTrack = id => {
+  return {
+    type: 'TOGGLE_TRACK',
+    id
+  };
+};
 
-export function setVisibilityFilter(filter) {
-  return { type: SET_VISIBILITY_FILTER, filter };
-}
+export const setVisibilityFilter = filter => {
+  return {
+    type: 'SET_VISIBILITY_FILTER',
+    filter
+  };
+};

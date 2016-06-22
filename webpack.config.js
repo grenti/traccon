@@ -10,6 +10,7 @@ const PATHS = {
 const config = {
   entry: [
     'babel-polyfill',
+    'webpack/hot/only-dev-server', // "only" prevents reload on syntax errors
     path.resolve(PATHS.app, 'index.jsx')
   ],
   output: {
@@ -39,7 +40,7 @@ const development = {
   devServer: {
     contentBase: PATHS.build,
     historyApiFallback: true,
-    hot: true,
+    // hot: true,
     inline: true,
     progress: true,
     stats: 'errors-only',

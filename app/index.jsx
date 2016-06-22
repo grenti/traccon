@@ -1,8 +1,9 @@
+import 'babel-polyfill';
 import { render } from 'react-dom';
 import React from 'react';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import tracconApp from './reducers/index';
+import tracconApp from './reducers';
 import App from './components/App';
 
 // class App extends React.Component {
@@ -15,7 +16,10 @@ import App from './components/App';
 //   }
 // }
 
-let store = createStore(tracconApp);
+let store = createStore(tracconApp, {
+  tracks: [],
+  visibilityFilter: 'SHOW_ALL'
+});
 
 render(
   <Provider store={store}>

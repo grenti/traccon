@@ -21,23 +21,18 @@ const track = (state, action) => {
   }
 };
 
-function tracks(state = [], action) {
+const tracks = (state = [], action) => {
   switch (action.type) {
     case ADD_TRACK:
       return [
-        ...state.tracks,
+        ...state,
         track(undefined, action)
       ];
     case TOGGLE_TRACK:
-      return state.tracks.map((track, index) => {
-        if (index === action.index) {
-          return Object.assign({}, track, { completed: !track.completed });
-        }
-        return track;
-      });
+      return state.map(track => track(track, action));
     default:
       return state;
   }
-}
+};
 
 export default tracks;

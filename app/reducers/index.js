@@ -3,8 +3,8 @@ import tracks from './tracks';
 import visibilityFilter from './visibilityFilter';
 
 const tracconApp = combineReducers({
-  visibilityFilter,
-  tracks
+  tracks,
+  visibilityFilter
 });
 
 export default tracconApp;
