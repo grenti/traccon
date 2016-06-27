@@ -16,8 +16,8 @@ const TrackList = ({ tracks, onTrackClick }) => (
 TrackList.propTypes = {
   tracks: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    completed: PropTypes.bool.isRequired
+    completed: PropTypes.bool.isRequired,
+    name: PropTypes.string.isRequired
   }).isRequired).isRequired,
   onTrackClick: PropTypes.func.isRequired
 };

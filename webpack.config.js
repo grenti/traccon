@@ -35,7 +35,7 @@ const config = {
 };
 
 const development = {
-  devtool: '#eval-source-map',
+  devtool: 'cheap-module-eval-source-map',
   debug: true,
   devServer: {
     contentBase: PATHS.build,

@@ -1,3 +1,4 @@
+
 import 'babel-polyfill';
 import { render } from 'react-dom';
 import React from 'react';
@@ -16,12 +17,11 @@ import App from './components/App';
 //   }
 // }
 
-let store = createStore(tracconApp, {
-  tracks: [],
-  visibilityFilter: 'SHOW_ALL'
-});
+let store = createStore(tracconApp);
 
 render(
   <Provider store={store}>
     <App/>
-  </Provider>, document.getElementById('app'));
+  </Provider>,
+  document.getElementById('app')
+);

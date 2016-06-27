@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { toggleTrack } from '../../actions';
-import TrackList from '../TrackList';
+import TrackList from './../TrackList';
 
 const getVisibleTracks = (tracks, filter) => {
   switch (filter) {

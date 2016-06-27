@@ -29,7 +29,7 @@ const tracks = (state = [], action) => {
         track(undefined, action)
       ];
     case TOGGLE_TRACK:
-      return state.map(track => track(track, action));
+      return state.map(t => track(t, action));
     default:
       return state;
   }
