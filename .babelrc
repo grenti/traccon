@@ -1,6 +1,18 @@
 {
-  "presets": ["es2015", "stage-3", "react"],
+  "presets": [
+    "env",
+    "react"
+  ],
   "plugins": [
-    "babel-plugin-transform-object-rest-spread"
-  ]
+    "babel-plugin-transform-object-rest-spread",
+    "babel-plugin-transform-class-properties",
+    "babel-plugin-transform-react-jsx-source"
+  ],
+  "env": {
+    "development": {
+      "presets": [
+        "react-hmre"
+      ]
+    }
+  }
 }

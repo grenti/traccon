@@ -1,30 +1,52 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import addTrack from '../../actions';
+import React, { Component } from 'react'
+import { PropTypes } from 'prop-types'
+import { connect } from 'react-redux'
+import addTrack from './../../actions'
 
-let AddTrack = ({ dispatch }) => {
-  let input;
+class AddTrack extends Component {
+  static propTypes = {
+    dispatch: PropTypes.func.isRequired
+  }
 
-  return (
-    <div>
-      <form onSubmit={e => {
-        e.preventDefault();
-        if (!input.value.trim()) {
-          return;
-        }
-        dispatch(addTrack(input.value));
-        input.value = '';
-      }}>
-        <input ref={node => {
-          input = node;
-        }} />
-        <button type="submit">Add Track
-        </button>
-      </form>
-    </div>
-  );
-};
+  constructor(props) {
+    super(props)
+  }
 
-AddTrack = connect()(AddTrack);
+  state = {
+    track: ''
+  }
 
-export default AddTrack;
+  handleSubmit = e => {
+    e.preventDefault()
+    if (!this.state.track) {
+      return
+    }
+    this.props.dispatch(addTrack(this.state.track))
+    this.setState({ track: '' })
+  }
+
+  handleChange = e => {
+    this.setState({ track: e.target.value })
+  }
+
+  render() {
+    let input
+
+    return (
+      <div>
+        <form onSubmit={this.handleSubmit}>
+          <input ref={node => { input = node }} onChange={this.handleChange} />
+          <button type="submit">Add Track</button>
+        </form>
+      </div>
+    )
+  }
+}
+
+function mapStateToProps(state) {
+  return {
+    track: state.track
+  }
+}
+
+export default connect(mapStateToProps)(AddTrack)

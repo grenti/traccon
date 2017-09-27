@@ -1,5 +1,4 @@
-
-import 'babel-polyfill';
+// import 'babel-polyfill';
 import { render } from 'react-dom';
 import React from 'react';
 import { Provider } from 'react-redux';
@@ -21,7 +20,7 @@ let store = createStore(tracconApp);
 
 render(
   <Provider store={store}>
-    <App/>
+    <App />
   </Provider>,
   document.getElementById('app')
 );

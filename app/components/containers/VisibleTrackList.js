@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { toggleTrack } from '../../actions';
-import TrackList from './../TrackList';
+import TrackList from '../TrackList';
 
 const getVisibleTracks = (tracks, filter) => {
   switch (filter) {
@@ -10,6 +10,8 @@ const getVisibleTracks = (tracks, filter) => {
       return tracks.filter(t => t.completed);
     case 'SHOW_ACTIVE':
       return tracks.filter(t => !t.completed);
+    default:
+      return [];
   }
 };
 

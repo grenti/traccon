@@ -1,26 +1,26 @@
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { resolve } = require('path')
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const PATHS = {
-  app: path.resolve(__dirname, 'app'),
-  build: path.resolve(__dirname, 'build')
+  app: resolve(__dirname, 'app'),
+  build: resolve(__dirname, 'build')
 };
 
 const config = {
   entry: [
-    'babel-polyfill',
-    'webpack/hot/only-dev-server', // "only" prevents reload on syntax errors
-    path.resolve(PATHS.app, 'index.jsx')
+    resolve(PATHS.app, 'index.jsx')
   ],
   output: {
     path: PATHS.build,
-    filename: '[name].js'
+    filename: 'bundle-[hash].js'
   },
-  resolve: ['', '.js', '.jsx'],
+  resolve: {
+    extensions: ['*', '.js', '.jsx']
+  },
   module: {
     loaders: [
-      { test: /\.(js|jsx)$/, exclude: /(node_modules)/, loaders: ['react-hot', 'babel'] }
+      { test: /\.(js|jsx)$/, exclude: /node_modules/, loader: ['react-hot-loader', 'babel-loader'] }
     ]
   },
   plugins: [
@@ -30,21 +30,24 @@ const config = {
       template: 'index.ejs',
       inject: 'body'
     }),
+    new webpack.LoaderOptionsPlugin({
+      debug: true
+    }),
+    new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ]
 };
 
 const development = {
   devtool: 'cheap-module-eval-source-map',
-  debug: true,
   devServer: {
-    contentBase: PATHS.build,
+    // contentBase: PATHS.build,
+    publicPath: '/',
     historyApiFallback: true,
-    // hot: true,
-    inline: true,
     progress: true,
+    hotOnly: true,
+    inline: true,
     stats: 'errors-only',
-    host: 'localhost',
     port: 9097
   }
 };

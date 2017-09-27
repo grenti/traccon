@@ -9,6 +9,6 @@ const App = () => (
     <VisibleTrackList />
     <Footer />
   </div>
-);
+)
 
-export default App;
+export default App
