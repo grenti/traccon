@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/routes/about.tsx"],
+  "sourcesContent": ["export default function About() {\n    return (\n      <main>\n        <h1>About us</h1>\n        <p>Just something about us</p>\n      </main>\n    );\n  }\n"],
+  "mappings": ";;;;;;AAAA;AAAe,SAAR,QAAyB;AAC5B,SACE,mDAAC;AAAA,IACC;AAAA,yDAAC;AAAA,QAAG;AAAA,SAAJ;AAAA;AAAA;AAAA;AAAA,aAAY;AAAA,MACZ,mDAAC;AAAA,QAAE;AAAA,SAAH;AAAA;AAAA;AAAA;AAAA,aAA0B;AAAA;AAAA,KAF5B;AAAA;AAAA;AAAA;AAAA,SAGA;AAEJ;",
+  "names": []
+}
