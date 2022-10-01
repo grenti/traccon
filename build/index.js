@@ -87,7 +87,7 @@ function Root() {
             content: "#000000"
           }, void 0, !1, {
             fileName: "app/root.tsx",
-            lineNumber: 13,
+            lineNumber: 10,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("meta", {
@@ -95,7 +95,7 @@ function Root() {
             content: "My beautiful React app"
           }, void 0, !1, {
             fileName: "app/root.tsx",
-            lineNumber: 14,
+            lineNumber: 11,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("link", {
@@ -103,7 +103,7 @@ function Root() {
             href: "/logo192.png"
           }, void 0, !1, {
             fileName: "app/root.tsx",
-            lineNumber: 18,
+            lineNumber: 12,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("link", {
@@ -111,14 +111,14 @@ function Root() {
             href: "/manifest.json"
           }, void 0, !1, {
             fileName: "app/root.tsx",
-            lineNumber: 19,
+            lineNumber: 13,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("title", {
             children: "My React App"
           }, void 0, !1, {
             fileName: "app/root.tsx",
-            lineNumber: 20,
+            lineNumber: 14,
             columnNumber: 9
           }, this)
         ]
@@ -130,19 +130,26 @@ function Root() {
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("body", {
         children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
           id: "root",
-          children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react2.Outlet, {}, void 0, !1, {
-            fileName: "app/root.tsx",
-            lineNumber: 24,
-            columnNumber: 11
-          }, this)
-        }, void 0, !1, {
+          children: [
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react2.Outlet, {}, void 0, !1, {
+              fileName: "app/root.tsx",
+              lineNumber: 18,
+              columnNumber: 11
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react2.LiveReload, {}, void 0, !1, {
+              fileName: "app/root.tsx",
+              lineNumber: 19,
+              columnNumber: 11
+            }, this)
+          ]
+        }, void 0, !0, {
           fileName: "app/root.tsx",
-          lineNumber: 23,
+          lineNumber: 17,
           columnNumber: 9
         }, this)
       }, void 0, !1, {
         fileName: "app/root.tsx",
-        lineNumber: 22,
+        lineNumber: 16,
         columnNumber: 7
       }, this)
     ]
@@ -184,8 +191,39 @@ function About() {
   }, this);
 }
 
+// app/routes/index.tsx
+var routes_exports = {};
+__export(routes_exports, {
+  default: () => Home
+});
+var import_jsx_dev_runtime = require("react/jsx-dev-runtime");
+function Home() {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("main", {
+    children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("h1", {
+        children: "Welcome to Traccon!"
+      }, void 0, !1, {
+        fileName: "app/routes/index.tsx",
+        lineNumber: 4,
+        columnNumber: 7
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", {
+        children: "Let's start by adding some tracks or sessions"
+      }, void 0, !1, {
+        fileName: "app/routes/index.tsx",
+        lineNumber: 5,
+        columnNumber: 7
+      }, this)
+    ]
+  }, void 0, !0, {
+    fileName: "app/routes/index.tsx",
+    lineNumber: 3,
+    columnNumber: 5
+  }, this);
+}
+
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "1f7e4eba", entry: { module: "/build/entry.client-VMGNTNL2.js", imports: ["/build/_shared/chunk-SVVJVQJB.js", "/build/_shared/chunk-IE366Y5W.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-22QM4OTG.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/about": { id: "routes/about", parentId: "root", path: "about", index: void 0, caseSensitive: void 0, module: "/build/routes/about-DWDLLCOP.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-1F7E4EBA.js" };
+var assets_manifest_default = { version: "a5a026ac", entry: { module: "/build/entry.client-GFXPHSMS.js", imports: ["/build/_shared/chunk-LU4ZYDGM.js", "/build/_shared/chunk-IE366Y5W.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-2AGB7AEL.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/about": { id: "routes/about", parentId: "root", path: "about", index: void 0, caseSensitive: void 0, module: "/build/routes/about-DWDLLCOP.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-PKVPR4H2.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-A5A026AC.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
@@ -204,6 +242,14 @@ var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { mod
     index: void 0,
     caseSensitive: void 0,
     module: about_exports
+  },
+  "routes/index": {
+    id: "routes/index",
+    parentId: "root",
+    path: void 0,
+    index: !0,
+    caseSensitive: void 0,
+    module: routes_exports
   }
 };
 // Annotate the CommonJS export names for ESM import in node:
